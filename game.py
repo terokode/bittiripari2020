@@ -18,8 +18,8 @@ class Game():
         self.screen = pygame.display.set_mode((800, 600))
 
         # Set window caption and icon
-        pygame.display.set_caption("Meteor")
-        icon = pygame.image.load('ufo.png')
+        pygame.display.set_caption("Meteors")
+        icon = pygame.image.load('meteor.png')
         pygame.display.set_icon(icon)
 
         # Intialize the objects of the game
@@ -45,7 +45,8 @@ class Game():
         return meteor
 
     def is_hit(self, meteor, bullet):
-        # Calculate if the top of the bullet is on a meteor radious 
+        # Calculate if the top of the bullet is in a meteor radious
+        # Must to fix bullet coordinate to center of bullet (+16 px)
         distance = math.sqrt(math.pow(meteor.x - (bullet.x + 16), 2) + (math.pow(meteor.y - bullet.y, 2)))
 
         return distance <= meteor.r
@@ -61,6 +62,7 @@ class Game():
         running = True
         while running:
             # RGB = Red, Green, Blue
+            # Black background
             self.screen.fill((0, 0, 0))
 
             for event in pygame.event.get():
@@ -83,6 +85,7 @@ class Game():
                         self.init_game()
 
                 if event.type == pygame.KEYUP:
+                    # When narrow key is up again then stop the craft
                     if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
                         self.craft.direction = Craft.HALT
 
@@ -123,11 +126,11 @@ class Game():
                     if meteor.y > 600 + meteor.r:
                         self.state = Game.GAMEOVER
 
-                # Show the craft and the store box on the screen
+                # Show the craft and the score display on the screen
                 self.craft.draw(self.screen)
                 self.score.draw(self.screen)
 
-            # Drow objects on the screen
+            # Draw objects on the screen
             pygame.display.update()
 
 game = Game()

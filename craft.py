@@ -12,7 +12,7 @@ class Craft:
         self.x = x
         self.y = y
         self.speed = speed
-        self.img = pygame.image.load('player.png')
+        self.img = pygame.image.load('craft.png')
         self.direction = Craft.HALT
         self.bullet = None
 
