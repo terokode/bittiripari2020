@@ -36,5 +36,4 @@ Ideoita jatkokehitykseen
 - Meteori kulkemaan myös vinottain
 - Lisää ääniefektejä (räjähdys, ampuminen), taustamusiikki
 - Rakettin kuva voi vähän muuttua, kun raketti liikkuu oikealle tai vasemmalle
-
-  
+- Vaikeuta peliä (nopeuta) ajan tai pisteden mukaan
