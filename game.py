@@ -75,14 +75,14 @@ class Game():
                 elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_LEFT:
                         self.craft.direction = Craft.LEFT
-                    if event.key == pygame.K_RIGHT:
+                    elif event.key == pygame.K_RIGHT:
                         self.craft.direction = Craft.RIGHT
-                    if event.key == pygame.K_SPACE:
+                    elif event.key == pygame.K_SPACE:
                         self.craft.fire()
-                    if event.key == pygame.K_n:
+                    elif event.key == pygame.K_n:
                         # Quit
                         running = False
-                    if event.key == pygame.K_y:
+                    elif event.key == pygame.K_y:
                         # Start a new game
                         self.init_game()
                 elif event.type == pygame.KEYUP:

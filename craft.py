@@ -9,9 +9,10 @@ class Craft:
     RIGHT = "RIGHT"
 
     def __init__(self, x = 0, y = 0, speed = 1):
+        # Craft position on screen (coordinates)
         self.x = x
         self.y = y
-        self.speed = speed
+        self.speed = speed  # Move px
         self.img = pygame.image.load('craft.png')
         self.direction = Craft.HALT
         self.bullet = None
@@ -20,15 +21,15 @@ class Craft:
         self.x += self.speed  # self.x = self.x + self.speed
 
         # Don't let go outside
-        if self.x >= 800 - 64:
-            self.x = 800 - 64
+        if self.x >= 800 - 32:
+            self.x = 800 - 32
 
     def moveLeft(self):
         self.x -= self.speed  # self.x = self.x - self.speed
 
         # Don't let go outside
-        if self.x <= 0:
-            self.x = 0
+        if self.x <= -32:
+            self.x = -32
 
     def fire(self):
         # Don't fire if the bullet is visible

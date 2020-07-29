@@ -4,6 +4,7 @@ import pygame
 class Meteor:
 
     def __init__(self, x = 0, y = 0, speed = 1, r = None, color = None):
+        # Location on the screen (coordinates)
         self.x = x
         self.y = y
         self.speed = speed
@@ -13,5 +14,6 @@ class Meteor:
         self.color = color or (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
 
     def draw(self, screen):
+        # Draw
         pygame.draw.circle(screen, self.color, (self.x, round(self.y)), self.r)
 
