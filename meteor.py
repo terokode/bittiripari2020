@@ -7,7 +7,7 @@ class Meteor:
         self.x = x
         self.y = y
         self.speed = speed
-        # Random a radios of a circle if not set
+        # Random a circle radios if not set
         self.r = r or random.randint(20, 100)
         # Tuple of RGB color. Random if not set
         self.color = color or (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))

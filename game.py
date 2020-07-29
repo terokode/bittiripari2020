@@ -16,6 +16,8 @@ class Game():
         pygame.init()
         # create the screen
         self.screen = pygame.display.set_mode((800, 600))
+        # Create an object to help track time
+        self.clock = pygame.time.Clock()
 
         # Set window caption and icon
         pygame.display.set_caption("Meteors")
@@ -27,7 +29,7 @@ class Game():
     
     def init_game(self, numMeteors=3):
         # Set a craft
-        self.craft = Craft(0, 600-90, 0.25)
+        self.craft = Craft(0, 600-90, 5)
         # Initialize a score object
         self.score = Score()
         # Empty meteors list
@@ -41,7 +43,7 @@ class Game():
 
     def init_meteor(self):
         # Create a new meteor obbject. Random position of meteor on x-axis (marginal 10 px) and random speed
-        meteor = Meteor(random.randint(10,800-10), 0, random.uniform(0.01, 0.10))
+        meteor = Meteor(random.randint(10, 790), 0, random.uniform(0.75, 2.50))
         return meteor
 
     def is_hit(self, meteor, bullet):
@@ -61,6 +63,10 @@ class Game():
         # Game Loop
         running = True
         while running:
+
+            # framerate: frames per second
+            self.clock.tick(60)
+
             # RGB = Red, Green, Blue
             # Black background
             self.screen.fill((0, 0, 0))

@@ -33,8 +33,8 @@ class Craft:
     def fire(self):
         # Don't fire if the bullet is visible
         if self.bullet is None:
-            # 
-            self.bullet = Bullet(self.x + 16, self.y + 10) 
+            #  Init a new bullet
+            self.bullet = Bullet(self.x + 16, self.y + 10, 10) 
 
     def draw(self, screen):
 
