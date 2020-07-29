@@ -64,9 +64,6 @@ class Game():
         running = True
         while running:
 
-            # framerate: frames per second
-            self.clock.tick(60)
-
             # RGB = Red, Green, Blue
             # Black background
             self.screen.fill((0, 0, 0))
@@ -74,9 +71,8 @@ class Game():
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
-
                 # if keystroke is pressed check it
-                if event.type == pygame.KEYDOWN:
+                elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_LEFT:
                         self.craft.direction = Craft.LEFT
                     if event.key == pygame.K_RIGHT:
@@ -89,8 +85,7 @@ class Game():
                     if event.key == pygame.K_y:
                         # Start a new game
                         self.init_game()
-
-                if event.type == pygame.KEYUP:
+                elif event.type == pygame.KEYUP:
                     # When narrow key is up again then stop the craft
                     if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
                         self.craft.direction = Craft.HALT
@@ -138,6 +133,8 @@ class Game():
 
             # Draw objects on the screen
             pygame.display.update()
+            # framerate: frames per second
+            self.clock.tick(60)
 
 game = Game()
 game.run()
