@@ -1,15 +1,14 @@
 VS Code
 =======
-
 * Asennus 
   * https://code.visualstudio.com/
 * Python-lisäosa
   * (View/Extensions)
   * https://code.visualstudio.com/docs/python/python-tutorial#_install-visual-studio-code-and-the-python-extension
+  * 29.7.2020: Myös Tatun (ArduBoy) ympäristö https://tswfi.github.io/ArduboyWorkshop/content/0-prep.html#Platformio-asennus
 
 Python
 ======
-
 * Asennus
    * Windows https://www.python.org/downloads/windows/ tai Microsoft Store
    * Asennetaan versio 3.8
@@ -23,6 +22,7 @@ pyGame
 ======
 * Asennusohje
   * https://www.pygame.org/wiki/GettingStarted
+* Virallinen dokumentaatio
   * https://www.pygame.org/docs/
 
 Kuvat
@@ -33,6 +33,7 @@ Ideoita jatkokehitykseen
 ========================
 - Aseta taustakuva
 - Räjähdyskuva, kun panos osuu meteoriin
+- Meteori kulkemaan myös vinottain
 - Lisää ääniefektejä (räjähdys, ampuminen), taustamusiikki
 - Rakettin kuva voi vähän muuttua, kun raketti liikkuu oikealle tai vasemmalle
 
