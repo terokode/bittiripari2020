@@ -1,12 +1,3 @@
-VS Code
-=======
-* Asennus 
-  * https://code.visualstudio.com/
-* Python-lisäosa
-  * (View/Extensions)
-  * https://code.visualstudio.com/docs/python/python-tutorial#_install-visual-studio-code-and-the-python-extension
-  * 29.7.2020: Myös Tatun (ArduBoy) ympäristö https://tswfi.github.io/ArduboyWorkshop/content/0-prep.html#Platformio-asennus
-
 Python
 ======
 * Asennus
@@ -24,6 +15,15 @@ pyGame
   * https://www.pygame.org/wiki/GettingStarted
 * Virallinen dokumentaatio
   * https://www.pygame.org/docs/
+
+VS Code
+=======
+* Asennus 
+  * https://code.visualstudio.com/
+* Python-lisäosa
+  * (View/Extensions)
+  * https://code.visualstudio.com/docs/python/python-tutorial#_install-visual-studio-code-and-the-python-extension
+  * 29.7.2020: Myös Tatun (ArduBoy) ympäristö https://tswfi.github.io/ArduboyWorkshop/content/0-prep.html#Platformio-asennus
 
 Kuvat
 =====
